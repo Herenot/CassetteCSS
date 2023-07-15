@@ -1,0 +1,140 @@
+:root {
+  --almost-black: #2d2d2d;
+}
+
+body{
+    background-color: rgb(164, 193, 247);
+    display: grid;
+    place-items: center;
+    height: 100vh; /* Ajusta el alto según tus necesidades */
+    margin: 0;
+}
+
+.external-black{
+    width: 30rem;
+    height: 15rem;
+    border: solid var(--almost-black);
+    border-radius: 15px;
+    background-color:  var(--almost-black);
+    position: relative;
+    display: grid;
+    grid-template-rows: 2.5fr 1fr;
+    justify-content: center;
+}
+
+
+.sticker{
+    align-self: center;
+    background-color: white;
+    border-radius: 10px;
+    height: 10rem;
+    width: 29rem;
+    display: grid;
+    grid-template-rows: 1.2fr 0.5fr 0.5fr 3fr;
+}
+
+.bottom-element{
+    align-self: end;
+    justify-self: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-width: 4rem;
+    height: 4rem;
+    width: 15rem;
+    background-color: #00000063;
+}
+
+.text-row{
+    background-color: rgba(112, 109, 109, 0.356);
+    width: 90%;
+    height: 0.1rem;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+.subelement {
+    display: grid;
+    position: relative;
+}
+
+.lines {
+    width:100%;
+    height: 0.75rem;
+}
+
+.center-element{
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(27, 27, 27);
+    width: 17rem;
+    height: 3.75rem;
+    border-radius: 35px;
+    margin: auto;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.circle
+{
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 80%;
+    background-color: white;
+    border-radius: solid black;
+}
+
+.rectangle {
+    align-self: center;
+    background-color: white;
+    height: 3rem;
+    width: 8rem;
+    background-image: linear-gradient(to right, #7473737e, #ffffff);
+}
+
+#empty{
+    flex-grow: 0.03;
+}
+
+.gear {
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: solid gray;
+    background-color: lightgray;
+    animation: rotate 4s infinite linear;
+  }
+  
+  .gear::before, .gear::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: gray;
+  }
+  
+  .gear::before {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .gear::after {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .stop {
+    animation-play-state: paused;
+  }

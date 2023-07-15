@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="external-black">
+        <div class="sticker">
+            <div></div>
+            <div class="text-row"></div>
+            <div class="text-row"></div>
+            <div class="subelement">
+                <div>
+                    <div class="lines" style="background-color: #fea3aa;"></div>
+                    <div class="lines" style="background-color: #f8b88b;"></div>
+                    <div class="lines" style="background-color: #faf884;"></div>
+                    <div class="lines" style="background-color: #baed91;"></div>
+                    <div class="lines" style="background-color: #b2cefe;"></div>
+                </div>
+                <div class="center-element">
+                    <div id="empty"></div>
+                    <div id="gear1" class="gear"></div>
+                    <div class="rectangle"></div>
+                    <div id="gear2" class="gear"></div>
+                    <div id="empty"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-element"></div>
+    </div>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var gear1 = document.getElementById('gear1');
+                var gear2 = document.getElementById('gear2');
+            
+            document.body.addEventListener('click', function() {
+                gear1.classList.toggle('stop');
+                gear2.classList.toggle('stop');
+            });
+            });
+    </script>
+</body>
+</html>
